@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Purpose: compile C sources (in src/) into object files (in bin/)
+# Author: Bharath Saiguhan
+# Note: basename() taken from the pure sh bible by @dylanaraps
+# ----------------------------------------------------------------
+
+basename() {
+    # Usage: basename "path" ["suffix"]
+    local tmp
+
+	# Strip '/' from the tail; needed in case of directory paths
+    tmp=${1%"${1##*[!/]}"}  
+	# Strip longest pattern ending in '/', from the head
+    tmp=${tmp##*/}
+	# Given suffix, remove from the tail
+	# The second half essentially replaces the filename with nothing
+    tmp=${tmp%"${2/"$tmp"}"}
+
+    # printf '%s\n' "${tmp:-/}"
+}
+
+for file in src/*.c; do
+	filename=${file##*/}
+	filename=${filename%.c}
+	gcc "${file}" -o "bin/${filename}.o"
+	chmod +x "bin/${filename}.o"
+done

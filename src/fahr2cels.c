@@ -16,7 +16,7 @@ int main()
     fahr = lower;
 
     printf("#####################################################\n");
-    printf("#         Celsius --> Fahrenheit Conversion         #\n");
+    printf("#         Fahrenheit --> Celsius Conversion         #\n");
     printf("#####################################################\n");
 
     while (fahr <= upper) {

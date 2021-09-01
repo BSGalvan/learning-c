@@ -15,9 +15,9 @@ int main()
 
     fahr = lower;
 
-    printf("#####################################################");
-    printf("#         Celsius --> Fahrenheit Conversion         #");
-    printf("#####################################################");
+    printf("#####################################################\n");
+    printf("#         Celsius --> Fahrenheit Conversion         #\n");
+    printf("#####################################################\n");
 
     while (fahr <= upper) {
         // (fahr - 32) would get converted implicitly just as well

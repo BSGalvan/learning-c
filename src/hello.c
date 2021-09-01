@@ -1,7 +1,7 @@
-#include <stdio.h>
+#include <stdio.h> // need this for printf()
 
-int main()
+int main()  // main() returns an int type implicitly
 {
-	printf("Hello, world!\n");
-	int count = 9;
+    printf("Hello, world!\n");
+    int count = 9;
 }

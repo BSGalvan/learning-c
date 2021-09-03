@@ -1,33 +1,36 @@
 #include <stdio.h>
 
-/* Copy the input to the output, replacing >1 blanks with one single blank. */
+#define YES 1
+#define NO  0
+
+/* copy the input to the output, replacing >1 blanks with one single blank. */
 
 int main()
 {
-        int c, blank_flag = 0;
+        int c, saw_blank = NO;
 
-        /* Here, blank_flag informs if the previous character read */
+        /* Here, saw_blank informs if the previous character read */
         /* was a blank (1) or not (0) */
 
         while ((c = getchar()) != EOF) {
-            if (c == ' ' && blank_flag)
+            if (saw_blank && c == ' ')
                 // Saw a blank just before and currently on a blank
                 // Don't print anything
                     continue;
-            else if (c == ' ' && !blank_flag) {
-                // Seeing a blank for the first time
+            else if (!saw_blank && c == ' ') {
+                // Didn't see a blank before and currently on a blank
                 // Print and toggle
                 putchar(c);
-                blank_flag = 1;
+                saw_blank = YES;
             }
             else {
-                // Seeing something other than a blank
+                // Saw something other than a blank
                 // Print ...
                 putchar(c);
-                if (blank_flag) {
+                if (saw_blank) {
                     // Saw a blank just before, not on a blank now
                     // ... Toggle
-                    blank_flag = 0;
+                    saw_blank = NO;
                 }
             }
         }

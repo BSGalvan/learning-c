@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-/* copy input to output; 1st version */
+/* copy input to output; 2nd version */
 
 int main()
 {
@@ -8,13 +8,9 @@ int main()
         /* EOF as well as normal char values */
         int c;
 
-        /* getchar reads (input) text stream */
-        /* character by character */
-        c = getchar();
-
         /* EOF = symbolic constant defined such that */
         /* it isn't confused with a regular char */
-        while (c != EOF) {
+        while ((c = getchar()) != EOF) {
                 /* putchar writes (usually to STDOUT) text stream */
                 /* character by character */
                 putchar(c);

@@ -8,6 +8,9 @@ int main()
         /* EOF as well as normal char values */
         int c;
 
+        /* getchar() reads (input) text stream */
+        /* character by character */
+
         /* EOF = symbolic constant defined such that */
         /* it isn't confused with a regular char */
         while ((c = getchar()) != EOF) {

@@ -14,12 +14,12 @@ int main()
         /* EOF = symbolic constant defined such that */
         /* it isn't confused with a regular char */
         while (c = getchar() != EOF) {
-            /* ^^^^^^^^^^^^^ != has a lower precedence, */
-            /* and so c will always be 1 (if not EOF) or 0 (if EOF)! */
+                /* ^^^^^^^^^^^^^ != has a lower precedence, */
+                /* and so c will always be 1 (if not EOF) or 0 (if EOF)! */
 
-            /* This will print out (N+1) 1's, where N is the number */
-            /* of characters in the text stream (+1 for EOL) */
-            printf("%d\n", c);
+                /* This will print out (N+1) 1's, where N is the number */
+                /* of characters in the text stream (+1 for EOL) */
+                printf("%d\n", c);
         }
 
         /* This will return the 0, corresponding to EOF */

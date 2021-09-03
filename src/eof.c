@@ -1,8 +1,9 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
 
-    int c = EOF;
+        int c = EOF;
 
-    printf("%d\n", c); 
+        printf("%d\n", c);
 }

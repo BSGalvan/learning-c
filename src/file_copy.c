@@ -17,6 +17,5 @@ int main()
                 /* putchar writes (usually to STDOUT) text stream */
                 /* character by character */
                 putchar(c);
-                c = getchar();
         }
 }

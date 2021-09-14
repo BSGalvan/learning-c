@@ -22,6 +22,6 @@ basename() {
 for file in src/*.c; do
     filename=${file##*/}
     filename=${filename%.c}
-    gcc "${file}" -o "bin/${filename}.o"
+    gcc -Wall -Wextra -pedantic "${file}" -o "bin/${filename}.o"
     chmod +x "bin/${filename}.o"
 done

@@ -3,10 +3,13 @@
 #define IN  1  /* inside a word */
 #define OUT 0  /* outside a word */
 
-/* count lines, words and characters in input */
-/* Note: a word here is any sequence of characters */
-/*       without a blank, newline or tab in it which means that punctuation */
-/*       will screw up the count (Exercise 1-11!)*/
+/* count lines, words and characters in input
+ * Note: a word here is any sequence of characters
+ *       without a blank, newline or tab in it which means that punctuation
+ *       will screw up the count (Exercise 1-11!).
+ *       Also see the clc wiki for more rigorous test cases, assuming the
+ *       definition of the word is respected.
+ */
 
 int main()
 {
